@@ -2,7 +2,7 @@ import os
 import requests
 from bs4 import BeautifulSoup
 import cohere
-
+import re
 import streamlit as st
 import streamlit.components.v1 as coms
 
@@ -59,7 +59,8 @@ if btn:
     time = soup.findAll("span", class_="r0bn4c rQMQod")[:5]
     links = [div.a['href'].replace(
         "/url?q=", "") for div in soup.findAll("div")[27:60] if div.a is not None][:5]
-
+    pattern = r"&.*$"
     for title, time, link in zip(title, time, links):
         st.write(f"Title: {title.text.strip()}, {time.text}")
+        link = re.sub(pattern, "", link)
         st.write(f"{link.strip()}")
