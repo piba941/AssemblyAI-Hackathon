@@ -1,0 +1,20 @@
+This program will extract percentages with claims and also summarizes.
+
+Text: A recent study has shown that consuming large amounts of dark chocolate can significantly improve cognitive function in older adults. In a double-blind, placebo-controlled trial, participants who ate at least one bar of dark chocolate per day for a period of six months showed a 30% improvement in memory, a 25% improvement in problem-solving abilities, and a 15% improvement in overall cognitive performance compared to the control group. These findings suggest that regular consumption of dark chocolate may be a simple and effective way to support cognitive health as we age
+
+Summarize: A study has found that consuming dark chocolate can improve cognitive function in older adults by 30% for memory, 25% for problem-solving abilities, and 15% for overall cognitive performance.
+
+--
+Text: A recent study has found that a new drug, known as "Miracle-Gro," can significantly improve physical health in older adults. In a double-blind, placebo-controlled trial, participants who took Miracle-Gro daily for six months showed a 20% increase in muscle mass, a 15% improvement in cardiovascular health, and a 10% reduction in body fat compared to the control group. These findings suggest that Miracle-Gro may be a revolutionary new way to support healthy aging.
+
+Summarize: A new drug called "Miracle-Gro" can significantly improve physical health in older adults by 20% for muscle mass, 15% for cardiovascular health, and 10% for body fat.
+
+--
+Text: One recent political fact is that the United States has a new President. On January 20, 2021, Joe Biden was inaugurated as the 46th President of the United States, succeeding Donald Trump. This marks the first time in over two centuries that a President has been inaugurated after losing both the popular vote and the electoral college. President Biden has pledged to address a range of issues facing the country, including the ongoing COVID-19 pandemic, economic inequality, and systemic racism.
+
+Summarize: One recent political fact is that the United States has a new President. On January 20, 2021, Joe Biden was inaugurated as the 46th President of the United States, succeeding Donald Trump.
+
+--
+Text:<<USER_INPUT>>
+
+Summarize:
