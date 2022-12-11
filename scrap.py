@@ -116,7 +116,7 @@ def read_online(filename):
     return data
 
 
-st.title("CohereAIHackathon")
+st.title("AssemblyAIHackathon")
 st.write(
     "A simple web app that tests whether the information is publicly available or made up."
 )
