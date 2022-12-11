@@ -145,7 +145,6 @@ st.write(
 )
 
 tab1, tab2 = st.tabs(["TextInput", "AudioInput"])
-
 with tab1:
     input = st.text_area(
         label="Enter text", placeholder="Enter something", height=500
