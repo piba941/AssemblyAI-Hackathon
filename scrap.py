@@ -1,4 +1,5 @@
 import os
+
 import requests
 import re
 from bs4 import BeautifulSoup
@@ -7,7 +8,6 @@ import time
 import streamlit as st
 
 from dotenv import load_dotenv
-from utils import get_output
 
 load_dotenv()
 
@@ -114,6 +114,29 @@ def read_online(filename):
     with open(filename, "r") as file:
         data = file.read()
     return data
+
+
+def get_output(text_output):
+    text_output = "+".join(text_output.split(" "))
+    url = f"https://google.com/search?q={text_output}&tbm=nws"
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, "html.parser")
+
+    # get top 5 title and date
+
+    title = soup.findAll("h3")[:10]
+    time = soup.findAll("span", class_="r0bn4c rQMQod")[:10]
+    links = [
+        div.a["href"].replace("/url?q=", "")
+        for div in soup.findAll("div")[27:60]
+        if div.a is not None
+    ][:10]
+
+    pattern = r"&.*$"
+    for title, time, link in zip(title, time, links):
+        st.write(f"Title: {title.text.strip()}, {time.text.strip()}")
+        link = re.sub(pattern, "", link)
+        st.write(f"{link}")
 
 
 st.title("AssemblyAIHackathon")
